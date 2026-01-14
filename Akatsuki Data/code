@@ -1,0 +1,33 @@
+import netCDF4
+import os
+import numpy as np
+import matplotlib.pyplot as plt
+import xarray as xr
+
+path = "D:/Work/RS_Lab/Data/Akatsuki"
+os.chdir(path)
+ds = xr.open_dataset("lir_20161021_120725_pic_l3c_v10.nc")
+ds
+
+var1=ds["btemp"]
+lat=ds["latitude"]
+lon=ds["longitude"]
+var1_av=var1.mean(dim=["time","longitude"])
+
+plt.figure(figsize=(8, 5))
+plt.plot(lat, var1_av, linewidth=3)
+
+plt.xlabel("Latitude", fontsize=14, fontweight="bold")
+plt.ylabel("Temperature (K)", fontsize=14, fontweight="bold")
+
+
+plt.xticks(fontsize=12, fontweight="bold")
+plt.yticks(fontsize=12, fontweight="bold")
+
+#plt.title("Zonal Mean Temperature", fontsize=16, fontweight="bold")
+ax = plt.gca()
+for spine in ax.spines.values():
+    spine.set_linewidth(2.5)
+
+plt.grid(True)
+plt.show()
