@@ -1,1 +1,7 @@
-There are a few examples of using bar diagrams, pie charts, and scatter plots in this repository
+There are a few examples of using bar diagrams, pie charts, and scatter plots in this repository.
+
+The bar diagram represents the sand grain size distribution by using Curiosity MAHLI (Edgett et al., 2012) observations. The associated data is 'Shivers_sol1793.csv'
+
+The pie chart illustrates the mineral distribution at the Gale crater by using the Curiosity Chemin (Blake et al., 2012) observations. The associated data is 'chemin_2227.csv'
+
+The scatter plot is between dune length, crest length and dune length, dune height for Herschel crater dunes (Banerjee et al., 2026). The data  associated data is 'dune_params.csv'.
